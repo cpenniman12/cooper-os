@@ -87,9 +87,9 @@ export default defineConfig({
         "fonts/*.woff2",
       ],
       manifest: {
-        name: "ryOS",
-        short_name: "ryOS",
-        description: "An AI OS experience, made with Cursor",
+        name: "Cooper OS",
+        short_name: "Cooper OS",
+        description: "Cooper's personalized web-based desktop environment with custom apps",
         theme_color: "#000000",
         background_color: "#000000",
         display: "standalone",
