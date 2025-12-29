@@ -155,6 +155,11 @@ const LazyPhotoBoothApp = createLazyComponent<unknown>(
   "photo-booth"
 );
 
+const LazyLifePhotosApp = createLazyComponent<unknown>(
+  () => import("@/apps/life-photos/components/LifePhotosComponent").then(m => ({ default: m.LifePhotosComponent })),
+  "life-photos"
+);
+
 const LazySynthApp = createLazyComponent<unknown>(
   () => import("@/apps/synth/components/SynthAppComponent").then(m => ({ default: m.SynthAppComponent })),
   "synth"
@@ -168,6 +173,21 @@ const LazyIpodApp = createLazyComponent<IpodInitialData>(
 const LazyKaraokeApp = createLazyComponent<IpodInitialData>(
   () => import("@/apps/karaoke/components/KaraokeAppComponent").then(m => ({ default: m.KaraokeAppComponent })),
   "karaoke"
+);
+
+const LazySpotifyApp = createLazyComponent<unknown>(
+  () => import("@/apps/spotify/components/SpotifyComponent").then(m => ({ default: m.SpotifyComponent })),
+  "spotify"
+);
+
+const LazySubstackApp = createLazyComponent<unknown>(
+  () => import("@/apps/substack/components/SubstackComponent").then(m => ({ default: m.SubstackComponent })),
+  "substack"
+);
+
+const LazyCursorApp = createLazyComponent<unknown>(
+  () => import("@/apps/cursor/components/CursorComponent").then(m => ({ default: m.CursorComponent })),
+  "cursor"
 );
 
 const LazyTerminalApp = createLazyComponent<unknown>(
@@ -196,10 +216,14 @@ import { appMetadata as chatsMetadata, helpItems as chatsHelpItems } from "@/app
 import { appMetadata as texteditMetadata, helpItems as texteditHelpItems } from "@/apps/textedit";
 import { appMetadata as paintMetadata, helpItems as paintHelpItems } from "@/apps/paint";
 import { appMetadata as photoboothMetadata, helpItems as photoboothHelpItems } from "@/apps/photo-booth";
+import { appMetadata as lifephotosMetadata, helpItems as lifephotosHelpItems } from "@/apps/life-photos";
 import { appMetadata as minesweeperMetadata, helpItems as minesweeperHelpItems } from "@/apps/minesweeper";
 import { appMetadata as videosMetadata, helpItems as videosHelpItems } from "@/apps/videos";
 import { appMetadata as ipodMetadata, helpItems as ipodHelpItems } from "@/apps/ipod";
 import { appMetadata as karaokeMetadata, helpItems as karaokeHelpItems } from "@/apps/karaoke";
+import { appMetadata as spotifyMetadata, helpItems as spotifyHelpItems } from "@/apps/spotify";
+import { appMetadata as substackMetadata, helpItems as substackHelpItems } from "@/apps/substack";
+import { appMetadata as cursorMetadata, helpItems as cursorHelpItems } from "@/apps/cursor";
 import { appMetadata as synthMetadata, helpItems as synthHelpItems } from "@/apps/synth";
 import { appMetadata as pcMetadata, helpItems as pcHelpItems } from "@/apps/pc";
 import { appMetadata as terminalMetadata, helpItems as terminalHelpItems } from "@/apps/terminal";
@@ -306,6 +330,19 @@ export const appRegistry = {
       maxSize: { width: 644, height: 510 },
     } as WindowConstraints,
   },
+  ["life-photos"]: {
+    id: "life-photos",
+    name: "Life",
+    icon: { type: "image", src: lifephotosMetadata.icon },
+    description: "Browse through my life photos and memories",
+    component: LazyLifePhotosApp,
+    helpItems: lifephotosHelpItems,
+    metadata: lifephotosMetadata,
+    windowConfig: {
+      defaultSize: { width: 600, height: 500 },
+      minSize: { width: 450, height: 400 },
+    } as WindowConstraints,
+  },
   ["minesweeper"]: {
     id: "minesweeper",
     name: "Minesweeper",
@@ -360,6 +397,45 @@ export const appRegistry = {
       mobileSquare: true,
     } as WindowConstraints,
   } as BaseApp<IpodInitialData> & { windowConfig: WindowConstraints },
+  ["spotify"]: {
+    id: "spotify",
+    name: "Spotify",
+    icon: { type: "image", src: spotifyMetadata.icon },
+    description: "Music and podcast streaming app",
+    component: LazySpotifyApp,
+    helpItems: spotifyHelpItems,
+    metadata: spotifyMetadata,
+    windowConfig: {
+      defaultSize: { width: 800, height: 600 },
+      minSize: { width: 600, height: 400 },
+    } as WindowConstraints,
+  },
+  ["substack"]: {
+    id: "substack",
+    name: "Substack Writings",
+    icon: { type: "image", src: substackMetadata.icon },
+    description: "Cooper's AI and technology writings",
+    component: LazySubstackApp,
+    helpItems: substackHelpItems,
+    metadata: substackMetadata,
+    windowConfig: {
+      defaultSize: { width: 900, height: 650 },
+      minSize: { width: 600, height: 400 },
+    } as WindowConstraints,
+  },
+  ["cursor"]: {
+    id: "cursor",
+    name: "Cursor",
+    icon: { type: "image", src: cursorMetadata.icon },
+    description: "AI-powered code editor",
+    component: LazyCursorApp,
+    helpItems: cursorHelpItems,
+    metadata: cursorMetadata,
+    windowConfig: {
+      defaultSize: { width: 800, height: 600 },
+      minSize: { width: 600, height: 400 },
+    } as WindowConstraints,
+  },
   ["synth"]: {
     id: "synth",
     name: "Synth",

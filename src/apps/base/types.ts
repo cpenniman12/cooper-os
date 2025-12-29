@@ -32,9 +32,13 @@ export interface BaseApp<TInitialData = unknown> {
     | "videos"
     | "pc"
     | "photo-booth"
+    | "life-photos"
     | "synth"
     | "ipod"
     | "karaoke"
+    | "spotify"
+    | "substack"
+    | "cursor"
     | "terminal"
     | "applet-viewer"
     | "admin";

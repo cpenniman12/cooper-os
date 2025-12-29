@@ -19,6 +19,10 @@ const DEFAULT_PINNED_ITEMS: DockItem[] = [
   { type: "app", id: "chats" },
   { type: "app", id: "internet-explorer" },
   { type: "app", id: "karaoke" },
+  { type: "app", id: "spotify" },
+  { type: "app", id: "substack" },
+  { type: "app", id: "cursor" },
+  { type: "app", id: "photo-booth" },
 ];
 
 interface DockStoreState {
