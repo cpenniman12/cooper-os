@@ -55,7 +55,7 @@ export function CursorComponent({
       appId="cursor"
       instanceId={instanceId}
     >
-      <div className="h-full bg-[#1e1e1e] text-white overflow-y-auto">
+      <div className="h-full w-full bg-[#1e1e1e] text-white overflow-y-auto">
         {/* Header */}
         <div className="flex flex-col items-center pt-20 pb-12">
           <div className="w-14 h-14 mb-3">

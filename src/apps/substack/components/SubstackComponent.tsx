@@ -84,7 +84,7 @@ export function SubstackComponent({
       appId="substack"
       instanceId={instanceId}
     >
-      <div className="h-[600px] bg-gradient-to-br from-orange-50 to-red-50 flex flex-col">
+      <div className="h-full w-full bg-gradient-to-br from-orange-50 to-red-50 flex flex-col">
         {/* Header */}
         <div className="bg-white shadow-sm border-b border-gray-200 p-6">
           <div className="flex items-center gap-4">

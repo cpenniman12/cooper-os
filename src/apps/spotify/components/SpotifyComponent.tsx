@@ -111,7 +111,7 @@ export function SpotifyComponent({
       appId="spotify"
       instanceId={instanceId}
     >
-      <div className="h-[600px] bg-black text-white flex flex-col">
+      <div className="h-full w-full bg-black text-white flex flex-col">
         {/* Top Navigation */}
         <div className="flex bg-gray-900 border-b border-gray-700">
           <button
