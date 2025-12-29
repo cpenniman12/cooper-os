@@ -142,6 +142,7 @@ export const useDockStore = create<DockStoreState>()(
     {
       name: "dock-storage",
       storage: createJSONStorage(() => localStorage),
+      version: 2, // Increment to force reload
     }
   )
 );
