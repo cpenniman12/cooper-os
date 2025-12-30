@@ -94,20 +94,20 @@ export default defineConfig({
         background_color: "#000000",
         display: "standalone",
         orientation: "any",
-        start_url: "/",
+        start_url: "/cooper-os/",
         icons: [
           {
-            src: "/icons/mac-192.png",
+            src: "/cooper-os/icons/mac-192.png",
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: "/icons/mac-512.png",
+            src: "/cooper-os/icons/mac-512.png",
             sizes: "512x512",
             type: "image/png",
           },
           {
-            src: "/icons/mac-512.png",
+            src: "/cooper-os/icons/mac-512.png",
             sizes: "512x512",
             type: "image/png",
             purpose: "maskable",
